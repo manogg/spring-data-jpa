@@ -50,10 +50,11 @@ public class EmployeeService {
         return employeeRepository.findByEmpSalary(empSalary);
     }
 
-    public Integer getEmployeesCount(){
-        int count=0;
-        count=employeeRepository.employeesCount();
-        return count;
+    public List<Integer> getEmployeesCount(){
+
+        List<Integer> cnt=new ArrayList<>();
+        cnt=employeeRepository.employeesCount();
+        return cnt;
 
     }
 

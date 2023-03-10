@@ -16,5 +16,5 @@ public interface EmployeeRepository extends JpaRepository<Employee,Integer> {
     List<Employee> findByEmpSalary(@Param("empSalary") Integer empSalary);
 
     @Query(value="select * from employee",countQuery = "select count(*) from employee",nativeQuery = true)
-    Integer employeesCount();
+    List<Integer> employeesCount();
 }
